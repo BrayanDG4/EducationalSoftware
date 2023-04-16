@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import {HomePage} from './pages/HomePage'
+import {NotFound} from './pages/NotFound'
 
 const App = () => {
   return (
-    <>
-      <div>Hello! probando estilos de tailwind</div>
-      <h1 className='text-3xl bg-red-400'>Este texto debe salir en negrita y fondo rojo</h1>
-    </>
+    <Routes>
+      <Route path='/' element={<HomePage/>} />
+      <Route path='/*' element={<NotFound/>} />
+    </Routes>
     
   )
 }
