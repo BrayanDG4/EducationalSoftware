@@ -1,91 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .space-between {
-        justify-content: space-between;
-    }
+@layer utilities {
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+  /* santiago */
 
-    .link{
-        @apply hover:text-slate-500 transition-all;
-    }
-    
-    .button-1{
-        @apply text-white px-3 py-2 font-bold rounded-md text-2xl
-    }
+  .mycolor {
+    color: #2e2d2d;
+  }
+  .mycolor2 {
+    color: #4d4c4c;
+  }
 
-    .button-2{
-        @apply text-white px-5 py-4 font-bold rounded-md text-3xl
-    }
 
-    .button-3{
-        @apply p-2 py-2 font-bold rounded-md border
-    }
+  .bg-endsection {
+    background-color: #2089d8;
+  }
 
-    .button-4{
-        @apply text-white px-3 py-2 font-bold rounded-md text-xl
-    }
+  .bg-section2 {
+    background-color: #F9FFFF;
 
-    .button-transition{
-        @apply hover:bg-cyan-600 transition-all;
-    }
+  }
+  .bg-advantages-section {
+    background-color: #9CD3E9;
 
-    .button-transition-2{
-        @apply hover:bg-red-700 transition-all;
-    }
+  }
 
-    .card{
-        @apply green-option-2 border p-12 rounded-md shadow-md mb-3;
-    }
+  /* NavBar */
 
-    .card-tittle{
-        @apply uppercase font-bold text-xl gray-text mb-4;
-    }
+  .link {
+    @apply font-bold mycolor2;
+  }
 
-    .card-description{
-        @apply font-semibold text-base gray-text;
-    }
+  .space-between {
+    justify-content: space-between;
+  }
 
-    .cyan-option-1{
-        background-color: #00BFBA;
-    }
+  /* section Main */
+  .img {
+    width: 500px;
+    height: 400px;
+  }
 
-    .green-option-1{
-        background-color: #4DDBAE;
-    }
+  /* section Main 2 */
 
-    .green-option-2{
-        background-color: #F8FFFF;
-    }
+  /* section Advantages */
 
-    .gray-text{
-        color: #4C4C4C;
-    }
+  /* img */
+  .super {
+    @apply w-16;
+    position: relative;
+    left: -40px;
+  }
 
-    .gray-text-2{
-        color: #989898;
-    }
+  .card {
+    @apply p-6 rounded-3xl shadow-md mb-7 bg-slate-50 h-48 flex;
+  }
 
-    .overlay{
-        @apply flex w-full h-screen fixed top-0 left-0 p-40 items-center justify-center;
-    }
+  .card-tittle {
+    @apply uppercase font-bold text-xl mb-4;
+  }
 
-    .close-icon{
-        @apply absolute text-2xl w-8 text-center top-16 right-16 cursor-pointer transition-all rounded-sm hover:green-option-1;
-    }
+  .card-description {
+    @apply font-semibold text-base leading-normal;
+  }
 
-    .glass{
-        background: rgba( 255, 255, 255, 0.5 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 7px );
-        -webkit-backdrop-filter: blur( 7px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-    }
+  /* section Started */
 
-    .clip-path{
-        clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    }
+  /* ------------------ */
+
+  /* buttons */
+  .color1 {
+    background-color: #6fbbe4;
+  }
+
+  .button-1 {
+    @apply text-white px-5 py-2 font-semibold rounded-2xl text-2xl;
+    @apply hover:color1 transition-all;
+    background-color: #2c9bd9;
+  }
+
+  .button-2 {
+    @apply px-5 py-4 font-bold rounded-md text-3xl;
+    @apply hover:color1 hover:text-white transition-all;
+    color: #2c9bd9;
+    background-color: #f8ffff;
+  }
+
+  /* others */
+  .overlay {
+    @apply flex w-full h-screen fixed top-0 left-0 p-40 items-center justify-center;
+  }
+
+  .close-icon {
+    @apply absolute text-2xl w-8 text-center top-16 right-16 cursor-pointer transition-all rounded-sm hover:green-option-1;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .clip-path {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
-

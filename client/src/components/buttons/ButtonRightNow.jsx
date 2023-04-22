@@ -1,8 +1,9 @@
-export const ButtonRightNow = (props) => {
+export const ButtonRightNow = ({text ="",bt}) => {
     return (
+
       
-      <button className="button-1 button-transition cyan-option-1">
-          ¡Registrarse!
+      <button className={bt?'button-1':'button-2'}>
+          {text}
       </button>
     )
   }  
