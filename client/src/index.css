@@ -10,10 +10,10 @@
   }
   /* santiago */
 
-  .mycolor {
+  .my-title-color {
     color: #2e2d2d;
   }
-  .mycolor2 {
+  .my-gray-text {
     color: #4d4c4c;
   }
 
@@ -31,10 +31,14 @@
 
   }
 
+  .bg-dashboard-section{
+    background-color: #F4FBFB;
+  }
+
   /* NavBar */
 
   .link {
-    @apply font-bold mycolor2;
+    @apply font-bold my-gray-text;
   }
 
   .space-between {
