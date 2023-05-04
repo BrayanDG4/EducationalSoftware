@@ -53,8 +53,8 @@ export const MainSection = () => {
           </div>
         </div>
 
-        <div>
-          <img className="w-10/12 object-cover mx-auto" src={dashboardImg} alt="Imagen principal" />
+        <div className="w-5/12">
+          <img className="mx-auto" src={dashboardImg} alt="Imagen principal" />
         </div>
       </div>
 
