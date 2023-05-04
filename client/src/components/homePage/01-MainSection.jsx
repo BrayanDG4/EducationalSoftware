@@ -4,16 +4,7 @@ import { ButtonRightNow } from "../buttons/ButtonRightNow";
 export const MainSection = () => {
   return (
     <section className="container mx-auto px-4 h-screen flex flex-col justify-center">
-      <div className="md:flex md:flex-row-reverse md:gap-10">
-        
-        {/*imagen  */}
-        <div className="mx-auto bg-cover">
-          <img
-            className=" mx-auto "
-            src={mainImage}
-            alt="Imagen principal"
-          />
-        </div>
+      <div className="md:flex md:gap-10">
 
         {/* textos */}
         <div className="font-semibold flex flex-col justify-around">
@@ -26,6 +17,15 @@ export const MainSection = () => {
             software educativo como apoyo al área de fundamentos de
             programación.
           </p>
+        </div>
+
+        {/*imagen  */}
+        <div className="mx-auto w-8/12 bg-cover">
+          <img
+            className=""
+            src={mainImage}
+            alt="Imagen principal"
+          />
         </div>
       </div>
 

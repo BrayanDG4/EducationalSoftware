@@ -3,9 +3,9 @@ import arrow  from "../../assets/arrow.svg";
 
 export const MainSection2 = () => {
   return (
-    <section className="container mx-auto px-4 h-screen bg-section2">
-      <div className="md:flex md:flex-row md:gap-10">
-        <div className="w-11/12 md:w-10/12 xl:w-6/12 xl:ml-52 mx-auto md:pr-32">
+    <section className="h-screen bg-section2 overflow-hidden">
+      <div className="mx-2 my-4 justify-center items-center md:flex md:gap-10">
+        <div className="mx-auto md:pr-32 md:pl-10 w-8/12">
           <img className=" mx-auto " src={mainImage} alt="Imagen principal" />
         </div>
 
@@ -19,8 +19,8 @@ export const MainSection2 = () => {
         </div>
       </div>
 
-      <div className="mt-10">
-      <img className=" mx-auto" src={arrow} alt="arrow" />
+      <div className="pt-28">
+        <img className="mx-auto" src={arrow} alt="arrow" />
       </div>
     </section>
   );

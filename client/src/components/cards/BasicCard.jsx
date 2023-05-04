@@ -6,7 +6,7 @@ import img4 from "../../assets/Imgsdvantages/ImgAdvantage4.svg";
 
 export const BasicCard = () => {
   return (
-    <div className="container mx-auto py-8 ">
+    <div className="container mx-auto py-8">
       <div className="mycolor2 grid grid-cols-1 md:grid-cols-2 md:gap-12 mx-5">
         <div className="card">
           <img src={img1} className="super" />
@@ -34,7 +34,7 @@ export const BasicCard = () => {
         <div className="card">
           <img src={img3} className="super" />
           <div className="">
-            <h3 className="card-tittle">retroalimentacion</h3>
+            <h3 className="card-tittle">retroalimentación</h3>
             <p className="card-description">
               Obtén retroalimentación inmediata y mide tu progreso en cada tema.
             </p>
@@ -44,7 +44,7 @@ export const BasicCard = () => {
         <div className="card">
           <img src={img4} className="super" />
           <div className="">
-            <h3 className="card-tittle">personalizacion</h3>
+            <h3 className="card-tittle">personalización</h3>
             <p className="card-description">
               ¡Personaliza los horarios a tu gusto!
             </p>
