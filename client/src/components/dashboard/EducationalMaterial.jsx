@@ -14,32 +14,14 @@ export const EducationalMaterial = () => {
             </h3>
             {/* CARD */}
             <div className="md:flex md:gap-2">
-              <a href="">
-                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
-                  <div className="flex justify-center my-2">
-                    <img className="w-40 object-cover" alt="" />
-                  </div>
-                  <div>
-                    <h2 className="my-title-color text-xl font-semibold text-center">
-                      EJERCICIOS
-                    </h2>
-                  </div>
-                </div>
-              </a>
+              <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
+                <iframe className="w-full h-full object-cover" width="300" height="300" src="https://www.youtube.com/embed/pKiXcvkzMl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               
-              <a href="">
-                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
-                  <div className="flex justify-center my-2">
-                    <img className="w-44 object-cover" alt="" />
-                  </div>
-                  <div>
-                    <h2 className="my-title-color text-xl font-semibold text-center">
-                      EVALUACIONES
-                    </h2>
-                  </div>
-                </div>
-              </a>
-              
+              <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/flyIq7Z9Wxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+
             </div>
             {/*END CARD */}
           </div>
