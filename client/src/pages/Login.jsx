@@ -3,9 +3,12 @@ import bubbles from "../assets/login/bubbles.svg";
 
 export const Login = () => {
   return (
+    // MAIN CONTAINER
     <section className="h-screen">
+      {/* SUB CONTAINER */}
       <div className="h-screen md:flex">
-        <div className="w-3/5 bg-gradient-to-b from-cyan-500 to-blue-500">
+        {/* LEFT CONTAINER */}
+        <div className="hidden md:block w-3/5 bg-gradient-to-b from-cyan-500 to-blue-500">
           <div className="w-9/12 m-auto">
             <img className="" src={bubbles} alt="Burbujas" />
           </div>
@@ -21,8 +24,8 @@ export const Login = () => {
             </p>
           </div>
         </div>
-
-        <div className="flex justify-center items-center w-2/5 bg-white">
+        {/* RIGHT CONTAINER */}
+        <div className="w-full h-screen flex justify-center items-center md:w-2/5 bg-white">
           <div className="w-10/12">
             <div className="text-center">
               <h1 className="my-title-color text-3xl font-bold">
@@ -76,7 +79,7 @@ export const Login = () => {
               </form>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-6 md:mb-4">
               <div>
                 <a className="font-semibold link-blue" href="">
                   ¿Olvidaste tú contraseña?
@@ -98,6 +101,7 @@ export const Login = () => {
                 Iniciar sesión
               </button>
             </div>
+            
           </div>
         </div>
       </div>
