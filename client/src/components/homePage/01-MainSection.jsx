@@ -1,7 +1,9 @@
 import mainImage from "../../assets/bubble-gum.gif";
+import { useAuthProviderStore } from "../../store/authStore.js";
 import { ButtonRightNow } from "../buttons/ButtonRightNow";
 
 export const MainSection = () => {
+
   return (
     <section className="container mx-auto px-4 h-screen flex flex-col justify-center">
       <div className="md:flex md:gap-10">
