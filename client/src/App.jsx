@@ -4,6 +4,8 @@ import {HomePage} from './pages/HomePage'
 import {NotFound} from './pages/NotFound'
 import { DashBoardPage } from './pages/DashBoardPage';
 import { Login } from './pages/Login';
+import { Register } from './pages/Register';
+
 
 
 const App = () => {
@@ -12,6 +14,7 @@ const App = () => {
       <Route path='/' element={<HomePage/>} />
       <Route path='/dashboard' element={<DashBoardPage/>} />
       <Route path='/login' element={<Login/>} />
+      <Route path='/register' element={<Register/>} />
       <Route path='/*' element={<NotFound/>} />
     </Routes>
     

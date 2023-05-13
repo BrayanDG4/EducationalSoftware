@@ -1,7 +1,7 @@
+import { FormRegister } from "../components/login/FormRegister";
 import { Infographic } from "../components/login/Infographic";
-import { FormLogin } from '../components/login/FormLogin'
 
-export const Login = () => {
+export const Register = () => {
   return (
     // MAIN CONTAINER
     <section className="h-screen">
@@ -10,7 +10,7 @@ export const Login = () => {
         {/* LEFT CONTAINER */}
         <Infographic/>
         {/* RIGHT CONTAINER */}
-        <FormLogin/>
+        <FormRegister/>
       </div>
     </section>
   );
