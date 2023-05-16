@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useAuthStore } from "../../store/authStore.js";
+import { useDbStore } from "../../store/dbStore.js";
 import { useNavigate } from "react-router-dom";
 
 export const FormRegister = () => {
@@ -20,6 +21,7 @@ export const FormRegister = () => {
   };
 
   const signUp = useAuthStore((state) => state.signUp);
+  const save = useDbStore((state) => state.save);
 
   const navigate = useNavigate();
 
@@ -28,12 +30,19 @@ export const FormRegister = () => {
     setPasswordConfirmation(false);
     // if everything is ok continue with the registration.
     try {
-
       if (user.userPassword != user.passwordConfirmation) {
         return setPasswordConfirmation(true);
       }
       //async function
       await signUp(user.userEmail, user.userPassword);
+
+      await save(
+        {
+          username: user.username,
+          userEmail: user.userEmail,
+        },
+        console.log("enviado")
+      );
       //redirect to...
       //   navigate('');
     } catch (error) {
@@ -80,7 +89,9 @@ export const FormRegister = () => {
                 onChange={handleChange}
               />
 
-              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">Error generado</p>
+              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">
+                Error generado
+              </p>
             </div>
 
             <div className="mb-1">
@@ -100,7 +111,9 @@ export const FormRegister = () => {
                 onChange={handleChange}
               />
 
-              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">Dirección no válida</p>
+              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">
+                Dirección no válida
+              </p>
             </div>
 
             <div className="mb-1">
@@ -120,7 +133,9 @@ export const FormRegister = () => {
                 onChange={handleChange}
               />
 
-              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">Error generado</p>
+              <p className="invisible peer-invalid:visible text-red-600 text-sm mb-1">
+                Error generado
+              </p>
             </div>
 
             <div className="mb-1">
@@ -140,7 +155,9 @@ export const FormRegister = () => {
                 onChange={handleChange}
               />
 
-              <p className="text-red-600 text-sm mb-1">{passwordConfirmation?"No coinciden las contraseñas!":""}</p>
+              <p className="text-red-600 text-sm mb-1">
+                {passwordConfirmation ? "No coinciden las contraseñas!" : ""}
+              </p>
             </div>
 
             <div className="mb-6 md:mb-4">

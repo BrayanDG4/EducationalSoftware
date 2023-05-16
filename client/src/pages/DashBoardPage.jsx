@@ -1,5 +1,5 @@
 import { MainSection } from "../components/dashboard/MainSection";
-import { NavBar } from "../components/homePage/00-NavBar";
+import { NavBar } from "../components/dashboard/NavBar";
 
 export const DashBoardPage = () => {
   return (

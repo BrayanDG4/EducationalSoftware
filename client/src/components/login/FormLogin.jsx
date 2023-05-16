@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useAuthStore } from "../../store/authStore.js";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 export const FormLogin = () => {
   const [user, setUser] = useState({
@@ -10,11 +9,10 @@ export const FormLogin = () => {
     userPassword: "",
   });
 
-  const handleSession = useAuthStore((state) => state.handleSession);
+  //Manejador de sessión
+  const { handleSession, currentUser, loginWithGoogle } = useAuthStore();
 
-  useEffect(() => {
-    handleSession;
-  }, []);
+  handleSession();
 
   const [error, setError] = useState();
 
@@ -26,6 +24,15 @@ export const FormLogin = () => {
 
   const navigate = useNavigate();
 
+  const handleLoginSignIn = async () => {
+    try {
+      await loginWithGoogle();
+      navigate("/dashboard");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if everything is ok continue with the registration.
@@ -33,7 +40,7 @@ export const FormLogin = () => {
       //async function
       await logIn(user.userEmail, user.userPassword);
       //redirect to...
-      //   navigate('');
+      navigate("/dashboard");
     } catch (error) {
       console.log(error.code);
       setError(error.message);
@@ -51,7 +58,10 @@ export const FormLogin = () => {
         </div>
 
         <div className="my-4">
-          <button className="flex justify-center text-lg shadow-md items-center gap-2 w-full border text-gray-700 py-2 rounded-md hover:bg-gray-100 transition-all">
+          <button
+            onClick={handleLoginSignIn}
+            className="flex justify-center text-lg shadow-md items-center gap-2 w-full border text-gray-700 py-2 rounded-md hover:bg-gray-100 transition-all"
+          >
             <FcGoogle className="text-4xl" />
             Iniciar sesión con Google
           </button>
