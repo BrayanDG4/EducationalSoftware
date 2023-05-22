@@ -86,8 +86,45 @@
     background-color: #6fbbe4;
   }
 
+  .color2 {
+    background-color: #2c9bd9;
+  }
+
+  .loader {
+    width: 64px;
+    height: 48px;
+    position: relative;
+    animation: split 1s ease-in infinite alternate;
+  }
+  .loader::before , .loader::after {
+    content: '';
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    transform: translateX(-10px);
+    background: #dadfdf;
+    opacity: 0.75;
+    backdrop-filter: blur(20px);
+  }
+  
+  .loader::after {
+    left: auto;
+    right: 0;
+    background: #FFF;
+    transform: translateX(10px);
+  }
+  
+  @keyframes split {
+   0% , 25%{ width: 64px }
+   100%{ width: 148px }
+  }
+    
+
   .button-1 {
-    @apply text-white px-5 py-2 font-semibold rounded-md text-2xl;
+    @apply text-white px-4 py-2 font-semibold rounded-md text-xl;
     @apply hover:color1 transition-all;
     background-color: #2c9bd9;
   }

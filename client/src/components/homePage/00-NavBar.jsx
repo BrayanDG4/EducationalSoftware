@@ -11,9 +11,8 @@ export const NavBar = () => {
           </h1>
         </div>
 
-        <nav className="md:flex md:space-x-10 md:items-center">
-
-          <ul className="hidden md:flex text-xl gap-10 items-center ">
+        <nav className="md:flex md:items-center">
+          <ul className="hidden md:flex text-xl gap-6 items-center">
             <li>
               <a href="#advantages" className="link">
                 Ventajas
@@ -26,7 +25,6 @@ export const NavBar = () => {
               </a>
             </li>
 
-
             <li>
               <ButtonRightNow text="Registrate" bt={true} />
             </li>
@@ -38,6 +36,12 @@ export const NavBar = () => {
 
           <div className="hidden md:flex">
             <ButtonRightNow />
+          </div>
+
+          <div className="md:hidden mr-2 text-5xl">
+            <a href="">
+              <MdSegment />
+            </a>
           </div>
         </nav>
       </div>
