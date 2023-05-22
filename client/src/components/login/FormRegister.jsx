@@ -165,7 +165,7 @@ export const FormRegister = () => {
                 <span className="my-gray-text font-semibold">
                   ¿Ya tienes cuenta?
                 </span>{" "}
-                <a className="font-semibold link-blue" href="">
+                <a className="font-semibold link-blue" href="/login">
                   ¡Iniciar sesión!
                 </a>
               </div>

@@ -7,6 +7,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../firebase.config.js";
 import { useEffect, useState } from "react";
@@ -28,6 +29,9 @@ export const useAuthStore = create(
     loginWithGoogle: () => {
       const googleProvider = new GoogleAuthProvider();
       return signInWithPopup(auth, googleProvider);
+    },
+    resetPassword: (email) => {
+      sendPasswordResetEmail(auth, email);
     },
     handleSession: () => {
       useEffect(() => {

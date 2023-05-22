@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useAuthStore } from "../../store/authStore.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 
 export const FormLogin = () => {
   const [user, setUser] = useState({
@@ -117,7 +117,7 @@ export const FormLogin = () => {
 
             <div className="mb-6 md:mb-4">
               <div>
-                <a className="font-semibold link-blue" href="">
+                <a className="font-semibold link-blue" href="/recover">
                   ¿Olvidaste tú contraseña?
                 </a>
               </div>
@@ -126,7 +126,7 @@ export const FormLogin = () => {
                 <span className="my-gray-text font-semibold">
                   ¿No tienes cuenta todavía?
                 </span>{" "}
-                <a className="font-semibold link-blue" href="">
+                <a className="font-semibold link-blue" href="/register">
                   ¡Registrate ahora!
                 </a>
               </div>
