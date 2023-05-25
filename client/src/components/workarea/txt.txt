@@ -1,0 +1,84 @@
+                {/* contiene los modulos */}
+        <div className="h-5/6  mt-3 overflow-y-scroll">
+          {/* -------------------- */}
+          <div className="my-3 rounded-lg">
+            <hr />
+            <button onClick={handlehidden}>
+              <div className="text-left font-bold py-6 px-2 ">
+                <h1>
+                  PE1: Módulo 1. Introducción a Python y a la Programación
+                  Informática
+                </h1>
+              </div>
+            </button>
+
+            {/* contiene los submodulos */}
+            <div id="modulo1" hidden={bool} >
+              <a className="" href="x">
+                1.0 Bienvenido a fundamentos python
+              </a>
+
+              <a href="s">
+                <p> 1.1 Sección 1 - Introducción a la programación</p>
+              </a>
+
+              <a href="c">
+                <p>1.2 Sección 2 – Introducción a Python</p>
+              </a>
+            </div>
+
+            <hr />
+          </div>
+          {/* ------------------ */}
+
+
+          <div className="my-3 rounded-lg">
+            <hr />
+            <button onClick={handlehidden}>
+              <div className="text-left font-bold py-6 px-2 ">
+                <h1>
+                  PE1: Módulo 1. Introducción a Python y a la Programación
+                  Informática
+                </h1>
+              </div>
+            </button>
+
+            {/* contiene los submodulos */}
+            <div id="modulo1" hidden={bool}>
+              <a className="" href="x">
+                1.0 Bienvenido a fundamentos python
+              </a>
+
+              <a href="s">
+                <p> 1.1 Sección 1 - Introducción a la programación</p>
+              </a>
+
+              <a href="c">
+                <p>1.2 Sección 2 – Introducción a Python</p>
+              </a>
+            </div>
+
+            <hr />
+          </div>
+          {/* ------------------ */}
+
+
+        </div>
+
+
+
+
+          const x = () => {
+    const details = document.querySelector("#first");
+
+    details.classList.add("bg-endsection");
+
+    // const btn = document.createElement("button");
+
+    // details.append(btn);
+
+    // btn.innerText = 'btn';
+    // btn.classList.add("link-blue");
+
+    // console.log(details);
+  };
