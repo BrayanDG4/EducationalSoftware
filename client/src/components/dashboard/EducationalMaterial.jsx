@@ -1,7 +1,7 @@
 export const EducationalMaterial = () => {
   return (
     <div>
-          <h2 className="text-4xl mycolor leading-snug font-bold md:text-4xl md:leading-normal md:mb-2">
+          <h2 className="text-4xl my-title-color leading-snug font-bold md:text-4xl md:leading-normal md:mb-2">
             Material educativo
           </h2>
           <p className="pt-6 text-xl my-gray-text leading-normal md:text-2xl">
