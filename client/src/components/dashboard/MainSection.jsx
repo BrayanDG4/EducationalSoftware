@@ -25,7 +25,7 @@ export const MainSection = () => {
             </h3>
             {/* CARD */}
             <div className="md:flex md:gap-2">
-              <a href="">
+              <a href="./dashboard/workarea">
                 <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
                   <div className="flex justify-center my-2">
                     <img

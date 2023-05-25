@@ -1,6 +1,5 @@
-import { MdClear, MdSegment, MdLogout } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
 import { useAuthStore } from "../../store/authStore.js";
-import { useState } from "react";
 
 export const NavBar = () => {
   const { logOut } = useAuthStore();
