@@ -8,7 +8,7 @@ export const MainSection = () => {
     <section className="container mx-auto px-4 h-screen flex flex-col justify-center">
       <div className="md:flex md:gap-10">
         {/* textos */}
-        <div className="font-semibold flex flex-col justify-around">
+        <div className="text-center md:text-left font-semibold flex flex-col justify-around">
           <h2 className="text-4xl mycolor leading-snug font-bold md:text-5xl md:leading-normal md:mb-7">
             ¡Desarrolla tu lógica de programación practicando!
           </h2>
@@ -26,17 +26,16 @@ export const MainSection = () => {
       </div>
 
       {/* boton */}
-      <div className="mt-5 md:mt-14  ">
-        <button
-          className={
-            "color2 text-white px-4 py-3 font-semibold rounded-md text-2xl hover:color1 transition-all"
-          }
-          onClick={() => {
-            navigate("/register");
-          }}
-        >
-          ¡Comienza ahora!
-        </button>
+      <div className="flex justify-center md:block mt-5 md:mt-14">
+        <a href="./login">
+          <button
+            className={
+              "color2 text-white px-4 py-3 font-semibold rounded-md text-2xl hover:color1 transition-all"
+            }
+          >
+            ¡Comienza ahora!
+          </button>
+        </a>
       </div>
     </section>
   );

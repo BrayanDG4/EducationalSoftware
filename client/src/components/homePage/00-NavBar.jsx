@@ -26,11 +26,15 @@ export const NavBar = () => {
             </li>
 
             <li>
-              <ButtonRightNow text="Registrate" bt={true} />
+              <a href="./register">
+                <ButtonRightNow text="Registrarse" bt={true} />
+              </a>
             </li>
 
             <li>
-              <ButtonRightNow text="Iniciar Seccion" bt={true} />
+              <a href="./login">
+                <ButtonRightNow text="Iniciar sesión" bt={true} />
+              </a>
             </li>
           </ul>
 

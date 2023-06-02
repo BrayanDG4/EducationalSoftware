@@ -5,14 +5,20 @@ import { EducationalMaterial } from "../dashboard/EducationalMaterial";
 import { useAuthStore } from "../../store/authStore.js";
 
 export const MainSection = () => {
-  const { currentUser } = useAuthStore();
+  const { handleSession,loading ,currentUser } = useAuthStore();
+
+  handleSession();
+
+  if (loading) return <h1>CARGANDO...</h1>
+
+  console.log("hola" + loading);
 
   return (
     <section className="bg-dashboard-section">
       <div className="p-4 md:flex md:p-4">
         <div>
           <h2 className="text-4xl my-title-color leading-snug font-bold md:text-4xl md:leading-normal md:mb-2">
-            ¡Bienvenido {currentUser.email || currentUser.displayName}!
+            ¡Bienvenido {currentUser.displayName || currentUser.email}!
           </h2>
           <p className="pt-6 text-xl my-gray-text leading-normal md:text-2xl">
             Resuelve ejercicios para fortalecer tus bases en fundamentos de
@@ -34,7 +40,7 @@ export const MainSection = () => {
                       alt="EJERCICIOS"
                     />
                   </div>
-                  <div>
+                  <div className="p-[10px] w-[10px]">
                     <h2 className="my-title-color text-xl font-semibold text-center">
                       EJERCICIOS
                     </h2>
@@ -51,7 +57,7 @@ export const MainSection = () => {
                       alt="EJERCICIOS"
                     />
                   </div>
-                  <div>
+                  <div className="p-[13px] w-[10px]">
                     <h2 className="my-title-color text-xl font-semibold text-center">
                       EVALUACIONES
                     </h2>
@@ -63,12 +69,12 @@ export const MainSection = () => {
           </div>
         </div>
 
-        <div className="w-5/12">
+        <div className="hidden md:block w-5/12">
           <img className="mx-auto" src={dashboardImg} alt="Imagen principal" />
         </div>
       </div>
 
-      <div className="p-4 md:flex md:p-4">
+      <div className="p-4 md:flex md:p-4 md:mt-6">
         <EducationalMaterial />
       </div>
     </section>

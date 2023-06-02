@@ -35,12 +35,14 @@ export const useAuthStore = create(
     },
     handleSession: () => {
       useEffect(() => {
-        onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
           set({ currentUser: currentUser });
           set({ loading: false });
           console.log("Funcionando");
           console.log(currentUser);
         });
+
+        return () => unsubscribe();
       }, []);
     },
   }),

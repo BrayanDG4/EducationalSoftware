@@ -44,7 +44,7 @@ export const FormRegister = () => {
         console.log("enviado")
       );
       //redirect to...
-      //   navigate('');
+      navigate('/login');
     } catch (error) {
       console.log(error.message);
       setError(error.message);
@@ -54,18 +54,11 @@ export const FormRegister = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center md:w-2/5 bg-white overflow-y-scroll">
       <div className="w-10/12 lg:h-screen">
-        <div className="text-center">
+        <div className="text-center my-6">
           <h1 className="my-title-color text-3xl font-bold">
             Software educativo
           </h1>
           <h3 className="my-gray-text text-xl">Texto descriptivo</h3>
-        </div>
-
-        <div className="my-4">
-          <button className="flex justify-center text-lg shadow-md items-center gap-2 w-full border text-gray-700 py-2 rounded-md hover:bg-gray-100 transition-all">
-            <FcGoogle className="text-4xl" />
-            Iniciar sesión con Google
-          </button>
         </div>
 
         <hr />
