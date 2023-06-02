@@ -1,4 +1,4 @@
-import SimpleAccordion from "./acordeon";
+import SimpleAccordion from "./components/acordeon";
 
 
 

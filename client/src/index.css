@@ -11,6 +11,40 @@
 .mih{
   height: 911px;
 }
+
+/* modulos  */
+.module-yellow{
+  @apply bg-amber-300 rounded-lg px-2
+}
+.module-blue{
+  @apply bg-cyan-200 rounded-lg px-2
+
+}
+.module-purple{
+
+  @apply bg-purple-300 rounded-lg px-2
+
+}
+
+.module-title{
+  @apply text-2xl  font-bold my-4
+}
+
+/* table module */
+table , td, th {
+	border: 1px solid #9CD3E9;
+	border-collapse: collapse;
+}
+td, th {
+	padding: 3px;
+	width: 30px;
+	height: 25px;
+}
+th {
+	background: #9CD3E9;
+}
+
+
 /* ------------------ */
   * {
     font-family: "Poppins", sans-serif;

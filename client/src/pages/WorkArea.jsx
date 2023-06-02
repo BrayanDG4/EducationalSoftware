@@ -8,12 +8,12 @@ export const WorkArea = () => {
   return (
     // MAIN CONTAINER
     <section className="h-screen">
-      <div className="h-16">
+      <div className="h-[10vh]">
         <NavArea/>
       </div>
       
       {/* SUB CONTAINER */}
-      <div className="mih md:flex">
+      <div className="h-[90vh] md:flex">
         
         {/* LEFT CONTAINER */}
         <AreaLeft />

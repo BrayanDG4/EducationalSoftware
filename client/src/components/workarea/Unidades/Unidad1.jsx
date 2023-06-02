@@ -1,92 +1,186 @@
-import fondoProgramacion from "../../../assets/programacion-2.jpg";
+import fondoProgramacion from "../../../assets/modulos/img-modulo1-1.gif";
+import Notes from "../components/notes";
 
-export const Modulo1 = () => {
+Notes;
+
+export const Unidad1 = () => {
   return (
-    <div className="h-full overflow-y-scroll flex flex-col">
+    <div className="h-full overflow-y-scroll flex flex-col font-semibold">
       <div className="flex flex-col">
-        <img src={fondoProgramacion} alt="imagen de programacion" />
+        <img src={fondoProgramacion} alt="imagen de programacion" className="rounded-3xl" />
 
-        <h1 className="font-bold my-4">
-          1.0.1 Aprende Python - el lenguaje de hoy y mañana
+        <h1 id="variables" className="module-title ">
+          Variables
         </h1>
 
         <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
+          Las Variables son contenedores en los que puedes almacenar valores
+          (informacion)
         </p>
       </div>
-      <div className="bg-lime-300 mt-3">
-        <h1 className="font-bold my-4">1.1.1 ¿Cómo funciona un programa de computadora?</h1>
+      <hr />
+      {/* tipos de varibles */}
+      <div className="flex flex-col mt-3">
+        <h1 id="tipovariables" className="module-title">
+          Tipos de variables
+        </h1>
         <p>
-          Bienvenido a Fundamentos de Python 1! Este curso ha sido diseñado y
-          desarrollado por OpenEDG Python Institute en asociación con Cisco
-          Networking Academy. El curso ha sido creado para cualquier persona y
-          todos aquellos que quieran aprender Python y técnicas modernas de
-          programación. Atraerá especialmente a:
+          Usamos <code className="module-blue">let</code> y{" "}
+          <code className="module-blue">const</code> para crear variables.{" "}
+          <br />
+          <br />
+          <code className="module-blue">let</code> : Nos permiten crear
+          variables mutables que si se puede cambiar. <br />
+          <br />
+          <code className="module-blue">const</code> : Nos permite declarar
+          variables inmutables, osea no se puede cambiar. <br />
         </p>
-      </div>
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
+
+        <hr />
+        {/* creacion de variables */}
+        <h1 id="creacionvariables" className="module-title">
+          Creacion de variables
+        </h1>
         <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
+          Primero debes declarar la variable con la palabra clave{" "}
+          <code className="module-blue">let</code> o{" "}
+          <code className="module-blue">const</code> seguida del nombre que le
+          quieras dar.
         </p>
-      </div>{" "}
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
+
+        <code className="my-6">
+          {" "}
+          let <code className="module-purple">patataFrita;</code>
+        </code>
+
+        <Notes />
+        <hr />
+
+        <p>Tras declarar una variable, puedes asignarle un valor</p>
+
+        <code className="my-6">
+          let <code className="module-yellow">nombre</code> = 'Bob';
+        </code>
+
         <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
+          Después de haberle dado un valor a la variable, puedes volver a
+          cambiarlo:
         </p>
-      </div>{" "}
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
+
+        <code className="my-6">
+          let<code className="module-yellow">nombre</code> = 'Bob'; <br />
+          <code className="module-yellow">nombre</code> = 'Steve';
+        </code>
+
+        <hr />
+        {/* tipo de datos */}
+        <h1 id="tipodatos" className="module-title">
+          Tipos de Datos
+        </h1>
+
+        <table>
+          <tr>
+            <td></td>
+            <th>Explicacion</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <th>String</th>
+            <td>
+              Se refiere a un caracteres llamado cadena. Para denotar que una
+              variable es una cadena, es necesario encerrarla entre comillas("
+              ")
+            </td>
+
+            <td>let x = 'Bob';</td>
+          </tr>
+          <tr>
+            <th>Number</th>
+            <td>Esto es un número. Los números no tienen comillas.</td>
+            <td>let x = 10;</td>
+          </tr>
+          <tr>
+            <th>Boolean</th>
+            <td>
+              Tienen valor verdadero/falso. <code className="module-purple">true/false</code> son palabras especiales
+              en JS, y no necesitan comillas..
+            </td>
+            <td>let x = true;</td>
+          </tr>
+        </table>
+        <br />
+
+        {/* comentarios */}
+        <h1 id="comentarios" className="module-title">
+          Comentarios
+        </h1>
+
         <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
+          Puedes escribir comentarios entre el código JavaScript, igual que
+          puedes en CSS. El navegador ignora el texto marcado como comentario.
+          En JavaScript, los comentarios de una sola línea se escriben así:
         </p>
-      </div>{" "}
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
+
+        <code className="my-6 module-purple">// Esto es un comentario</code>
+
+        {/* operadores */}
+        <h1 id="operadores" className="module-title">
+          Operadores
+        </h1>
         <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
+          Un operador es básicamente un símbolo matemático que puede actuar
+          sobre dos valores (o variables) y producir un resultado.
         </p>
-      </div>{" "}
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
-        <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
-        </p>
-      </div>{" "}
-      <div className="bg-lime-300 mt-3">
-        <h1>1.0.1 Aprende Python - el lenguaje de hoy y mañana</h1>
-        <p>
-          Este curso es el primero de una serie de dos cursos Fundamentos de
-          Python. Cubre todo lo que necesitas saber para comenzar a diseñar,
-          escribir, ejecutar, depurar y mejorar los programas de Python en el
-          nivel básico También te prepara completamente para la certificación
-          PCEP – Certified Entry-Level Python Programmer del Python Institute.
-        </p>
+
+        <table>
+          <tr>
+            <td></td>
+            <th>Explicacion</th>
+            <th>Simbolo</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <th>Suma/concatena</th>
+            <td>Se usa para sumar dos números, o juntar dos cadenas en una.</td>
+
+            <td>+</td>
+            <td>
+              6 <code className="module-yellow">+</code> 9; <br />
+              "Hola " + "mundo!";
+            </td>
+          </tr>
+          <tr>
+            <th>Resta, multiplicación, división</th>
+            <td>
+              Estos hacen lo que esperarías que hicieran en las matemáticas
+              básicas.
+            </td>
+            <td>-, *, /</td>
+            <td>
+              9 - 3; <br />
+              8 <code className="module-yellow">*</code> 2; // La multiplicación en JS es un asterisco <br />9 / 3;
+            </td>
+          </tr>
+          <tr>
+            <th>Operador de asignación</th>
+            <td>
+              Los has visto anteriormente: asigna un valor a una variable.
+            </td>
+            <td><code className="module-yellow">=</code></td>
+            <td>let x = 'santi';</td>
+          </tr>
+          <tr>
+            <th>identidad/igualdad</th>
+            <td>
+              Comprueba si dos valores son iguales entre sí, y devuelve un valor
+              de <code className="module-yellow">true/false</code> (booleano).
+            </td>
+            <td>===</td>
+            <td>let x = 3; <br />
+              x <code className="module-yellow">===</code> 4;;</td>
+          </tr>
+        </table>
+        <br />
       </div>
     </div>
   );
