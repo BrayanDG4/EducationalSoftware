@@ -1,15 +1,16 @@
 import dashboardImg from "../../assets/dashboard/dashboard-img.png";
 import exerciseImg from "../../assets/dashboard/exercise-img.png";
 import testImg from "../../assets/dashboard/test-img.png";
+import theoric from "../../assets/dashboard/theoric.png";
 import { EducationalMaterial } from "../dashboard/EducationalMaterial";
 import { useAuthStore } from "../../store/authStore.js";
 
 export const MainSection = () => {
-  const { handleSession,loading ,currentUser } = useAuthStore();
+  const { handleSession, loading, currentUser } = useAuthStore();
 
   handleSession();
 
-  if (loading) return <h1>CARGANDO...</h1>
+  if (loading) return <h1>CARGANDO...</h1>;
 
   console.log("hola" + loading);
 
@@ -32,7 +33,24 @@ export const MainSection = () => {
             {/* CARD */}
             <div className="md:flex md:gap-2">
               <a href="./dashboard/workarea">
-                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
+                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
+                  <div className="flex justify-center my-2">
+                    <img
+                      className="w-40 object-cover"
+                      src={theoric}
+                      alt="EJERCICIOS"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h2 className="my-title-color m-auto text-xl font-semibold">
+                      TEORÍA
+                    </h2>
+                  </div>
+                </div>
+              </a>
+
+              <a href="">
+                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
                   <div className="flex justify-center my-2">
                     <img
                       className="w-40 object-cover"
@@ -40,8 +58,8 @@ export const MainSection = () => {
                       alt="EJERCICIOS"
                     />
                   </div>
-                  <div className="p-[10px] w-[10px]">
-                    <h2 className="my-title-color text-xl font-semibold text-center">
+                  <div className="text-center">
+                    <h2 className="my-title-color m-auto text-xl font-semibold">
                       EJERCICIOS
                     </h2>
                   </div>
@@ -49,16 +67,12 @@ export const MainSection = () => {
               </a>
 
               <a href="">
-                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4">
+                <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
                   <div className="flex justify-center my-2">
-                    <img
-                      className="w-44 object-cover"
-                      src={testImg}
-                      alt="EJERCICIOS"
-                    />
+                    <img className="w-44" src={testImg} alt="EVALUACIONES" />
                   </div>
-                  <div className="p-[13px] w-[10px]">
-                    <h2 className="my-title-color text-xl font-semibold text-center">
+                  <div className="text-center">
+                    <h2 className="my-title-color text-xl font-semibold">
                       EVALUACIONES
                     </h2>
                   </div>
@@ -69,8 +83,12 @@ export const MainSection = () => {
           </div>
         </div>
 
-        <div className="hidden md:block w-5/12">
-          <img className="mx-auto" src={dashboardImg} alt="Imagen principal" />
+        <div className="hidden md:block w-[40%] 2xl:w-[20%]">
+          <img
+            className="mx-auto object-cover"
+            src={dashboardImg}
+            alt="Imagen principal"
+          />
         </div>
       </div>
 

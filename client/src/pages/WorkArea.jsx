@@ -1,4 +1,4 @@
-import { NavArea } from "../components/workarea/NavArea";
+import {NavBar} from '../components/dashboard/NavBar'
 
 import { AreaLeft } from "../components/workarea/AreaLeft";
 
@@ -9,7 +9,7 @@ export const WorkArea = () => {
     // MAIN CONTAINER
     <section className="h-screen">
       <div className="h-[10vh]">
-        <NavArea/>
+        <NavBar/>
       </div>
       
       {/* SUB CONTAINER */}

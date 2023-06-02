@@ -24,7 +24,7 @@ export const NavBar = () => {
         <nav className="md:flex md:space-x-10 md:items-center">
           <ul className="hidden md:flex text-xl gap-10 items-center ">
             <li>
-              <a href="#about-us" className="link">
+              <a href="/dashboard" className="link">
                 Inicio
               </a>
             </li>
