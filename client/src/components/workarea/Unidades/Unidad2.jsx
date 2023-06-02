@@ -34,7 +34,7 @@ export const Unidad2 = () => {
 
         <pre className="my-6 p-2 bg-slate-400 rounded-md ">
           {`if (condición) {
-  ejecuta código de ser verdadero (true) 
+    ejecuta código de ser verdadero (true) 
 }else{
    ejecuta este otro código  (false) }`}
         </pre>

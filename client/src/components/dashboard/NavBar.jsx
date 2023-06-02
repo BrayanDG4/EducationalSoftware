@@ -17,7 +17,7 @@ export const NavBar = () => {
       <div className="container sm:mx-auto pb-3 px-5 flex mt-3 justify-center items-center space-between">
         <div className="ml-2">
           <h1 className="text-3xl font-bold">
-            <a href="#">APP</a>
+            <a href="#">LOOPEDU</a>
           </h1>
         </div>
 

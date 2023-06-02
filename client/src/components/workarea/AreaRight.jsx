@@ -5,6 +5,7 @@ import { Unidad3 } from "./Unidades/Unidad3";
 import { useModuleStore } from "../../store/moduleStore";
 
 export const AreaRight = () => {
+  
   const handleModules = () => {
     const { count } = useModuleStore();
 

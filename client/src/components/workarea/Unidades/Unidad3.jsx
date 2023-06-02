@@ -53,10 +53,10 @@ export function Unidad3() {
         <p>Cuando se ejecuta un bucle <code className="module-purple">for</code>, ocurre lo siguiente: </p>
         <br />
         <ol className="table-column-group ">
-          <li><span className="module-yellow">1</span> Se ejecuta la expresión de iniciación expresiónInicial, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.</li> <br />
-          <li><span className="module-yellow">2</span> Se evalúa la expresión expresiónCondicional. Si el valor de expresiónCondicional es verdadero, se ejecutan las instrucciones del bucle. Si el valor de condición es falso, el bucle for termina. (Si la expresión condición se omite por completo, se supone que la condición es verdadera).</li> <br />
-          <li><span className="module-yellow">3</span> Se ejecuta la instrucción. Para ejecutar varias instrucciones, usa una declaración de bloque ( ... ) para agrupar esas declaraciones.</li> <br />
-          <li><span className="module-yellow">4</span> Si está presente, se ejecuta la expresión de actualización expresiónDeActualización.</li> <br />
+          <li><span className="module-yellow">1</span> Se ejecuta la expresión de iniciación <code className="module-yellow">expresiónInicial</code>, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.</li> <br />
+          <li><span className="module-yellow">2</span> Se evalúa la expresión <code className="module-yellow">expresiónCondicional</code>. Si el valor de <code className="module-yellow">expresiónCondicional</code> es verdadero, se ejecutan las instrucciones del bucle. Si el valor de condición es falso, el bucle for termina. (Si la expresión condición se omite por completo, se supone que la condición es verdadera).</li> <br />
+          <li><span className="module-yellow">3</span> Se ejecuta la <code className="module-yellow">instrucción</code>. Para ejecutar varias instrucciones, usa una declaración de bloque ( ... ) para agrupar esas declaraciones.</li> <br />
+          <li><span className="module-yellow">4</span> Si está presente, se ejecuta la expresión de actualización <code className="module-yellow">expresiónDeActualización</code></li> <br />
           <li><span className="module-yellow">5</span> El control regresa al paso 2. </li>
         </ol>
 
@@ -65,6 +65,24 @@ export function Unidad3() {
         <h1 id="declaracion" className="module-title">
           DO While
         </h1>
+        <p>
+        La instrucción <span className="module-blue">do...while</span> se repite hasta que una condición especificada se evalúe como falsa, con la primicia se ejecuta una vez antes de que se verifique la condición. 
+        </p>
+
+        <pre className="my-6 p-2 bg-slate-400 rounded-md">
+          <p>
+            Una declaración <code className="module-blue">do while</code> tiene el
+            siguiente aspecto:
+          </p>
+
+          {`    do
+        expresión
+
+    while (condición);`}
+        </pre>
+
+
+
 
 
 

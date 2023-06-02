@@ -8,7 +8,7 @@ import { Register } from "./pages/Register";
 import { WorkArea } from "./pages/WorkArea";
 import { ProtectedRoute } from "./components/routes/ProtectedRoute";
 import { RecoverPassword } from "./pages/RecoverPassword";
-
+import {Exercises} from './pages/Exercises'
 const App = () => {
   return (
     <Routes>
@@ -17,7 +17,7 @@ const App = () => {
         path="/dashboard"
         element={
           //<ProtectedRoute>
-            <DashBoardPage />
+          <DashBoardPage />
           //</ProtectedRoute>
         }
       />
@@ -25,10 +25,18 @@ const App = () => {
         path="/dashboard/workarea"
         element={
           // <ProtectedRoute>
-            <WorkArea />
+          <WorkArea />
           // {/* </ProtectedRoute> */}
         }
-      />      
+      />
+      <Route
+        path="/dashboard/exercises"
+        element={
+          // <ProtectedRoute>
+          <Exercises/>
+          // {/* </ProtectedRoute> */}
+        }
+      />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/recover" element={<RecoverPassword />} />
