@@ -59,28 +59,28 @@ export default function Notes() {
         </Tabs>
       </Box>{" "}
       <TabPanel value={value} index={0}>
-        <p className=" font-semibold"> 
-        <span className="module-purple">Nota</span>: todas las líneas en JS deben acabar en punto y coma <code className="module-purple">(;)</code> para
+        <p className=" font-medium"> 
+        <span className="module-purple font-bold">Nota</span>: todas las líneas en JS deben acabar en punto y coma <code className="module-purple font-bold">(;)</code> para
           indicar que es ahí donde termina la declaración. Si no los incluyes
-          puedes obtener <span className="module-purple">resultados inesperados.</span>
+          puedes obtener <span className="module-purple font-bold">resultados inesperados.</span>
         </p>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <p className=" font-semibold">
-          <span className="module-purple">Nota</span>:
+        <p className=" font-medium">
+          <span className="module-purple font-bold">Nota</span>:
           JavaScript distingue entre mayúsculas y minúsculas.
-          <span className="module-purple">miVariable</span> es
+          <span className="module-purple font-bold">miVariable</span> es
           distinto a{" "}
-          <span className="module-purple">mivariable</span>.Si
+          <span className="module-purple font-bold">mivariable</span>.Si
           estás teniendo problemas en tu código, revisa las mayúsculas y
           minúsculas.
         </p>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <p className=" font-semibold">
-          <span className="module-purple">Nota</span>: puedes
+        <p className=" font-medium">
+          <span className="module-purple font-bold">Nota</span>: puedes
           llamar a una variable con casi cualquier nombre, pero hay algunas
-          <span className="module-purple">restricciones</span>{" "}
+          <span className="module-purple font-bold">restricciones</span>{" "}
         </p>
       </TabPanel>
     </Box>

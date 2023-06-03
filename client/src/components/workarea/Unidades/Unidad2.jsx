@@ -14,7 +14,7 @@ export const Unidad2 = () => {
           Puedes tomar una decision !!!
         </h1>
 
-        <p>
+        <p className="font-medium">
           Las personas, junto con otros animales, hacen elecciones
           constantemente que tienen un impacto en sus vidas, desde las
           decisiones más triviales como que comer hasta irse a marte o venus
@@ -28,8 +28,8 @@ export const Unidad2 = () => {
           Declaraciones <span className="module-purple">if ... else</span>
         </h1>
 
-        <p>
-          Una sintaxis básica <code>if...else</code> luce así.
+        <p className="font-medium">
+          Una sintaxis básica <code className="font-bold">if...else</code> luce así.
         </p>
 
         <pre className="my-6 p-2 bg-slate-400 rounded-md ">
@@ -39,7 +39,7 @@ export const Unidad2 = () => {
    ejecuta este otro código  (false) }`}
         </pre>
 
-        <p>
+        <p className="font-medium">
           El código es fácil de comprender: dici "si{" "}
           <code className="module-yellow">(if)</code> la condición retorna
           verdadero (true), entonces ejecute el código A <br />
@@ -51,7 +51,7 @@ export const Unidad2 = () => {
         <h1 id="elseif" className="module-title">
           <span className="module-blue">else if</span>
         </h1>
-        <p>
+        <p className="font-medium">
           Hay una forma de encadenar opciones ( resultados adicionales) a
           if...else <br /> usando{" "}
           <span className="font-bold module-blue">else if</span>. Cada opción
@@ -82,7 +82,7 @@ export const Unidad2 = () => {
           </span>
         </h1>
 
-        <p>
+        <p className="font-medium">
           Está perfectamente permitido poner una declaración{" "}
           <span className="module-purple">if...else</span> dentro de otra
           declaración <span className="module-purple">if...else</span> para

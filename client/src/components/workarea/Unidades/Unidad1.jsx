@@ -7,13 +7,17 @@ export const Unidad1 = () => {
   return (
     <div className="h-full overflow-y-scroll flex flex-col font-semibold">
       <div className="flex flex-col">
-        <img src={fondoProgramacion} alt="imagen de programacion" className="rounded-3xl" />
+        <img
+          src={fondoProgramacion}
+          alt="imagen de programacion"
+          className="rounded-3xl"
+        />
 
         <h1 id="variables" className="module-title ">
           Variables
         </h1>
 
-        <p>
+        <p className="font-medium">
           Las Variables son contenedores en los que puedes almacenar valores
           (informacion)
         </p>
@@ -24,16 +28,16 @@ export const Unidad1 = () => {
         <h1 id="tipovariables" className="module-title">
           Tipos de variables
         </h1>
-        <p>
-          Usamos <code className="module-blue">let</code> y{" "}
-          <code className="module-blue">const</code> para crear variables.{" "}
+        <p className="font-medium">
+          Usamos <code className="module-blue font-bold">let</code> y{" "}
+          <code className="module-blue font-bold">const</code> para crear
+          variables. <br />
           <br />
+          <code className="module-blue font-bold">let</code> : Nos permiten
+          crear variables mutables que si se puede cambiar. <br />
           <br />
-          <code className="module-blue">let</code> : Nos permiten crear
-          variables mutables que si se puede cambiar. <br />
-          <br />
-          <code className="module-blue">const</code> : Nos permite declarar
-          variables inmutables, osea no se puede cambiar. <br />
+          <code className="module-blue font-bold">const</code> : Nos permite
+          declarar variables inmutables, osea no se puede cambiar. <br />
         </p>
 
         <hr />
@@ -41,7 +45,7 @@ export const Unidad1 = () => {
         <h1 id="creacionvariables" className="module-title">
           Creacion de variables
         </h1>
-        <p>
+        <p className="font-medium">
           Primero debes declarar la variable con la palabra clave{" "}
           <code className="module-blue">let</code> o{" "}
           <code className="module-blue">const</code> seguida del nombre que le
@@ -50,7 +54,7 @@ export const Unidad1 = () => {
 
         <code className="my-6">
           {" "}
-          let <code className="module-purple">patataFrita;</code>
+          let <code className="module-purple font-medium">patataFrita;</code>
         </code>
 
         <Notes />
@@ -58,8 +62,8 @@ export const Unidad1 = () => {
 
         <p>Tras declarar una variable, puedes asignarle un valor</p>
 
-        <code className="my-6">
-          let <code className="module-yellow">nombre</code> = 'Bob';
+        <code className="my-6 font-medium">
+          let <code className="module-yellow font-medium">nombre</code> = 'Bob';
         </code>
 
         <p>
@@ -67,9 +71,10 @@ export const Unidad1 = () => {
           cambiarlo:
         </p>
 
-        <code className="my-6">
-          let<code className="module-yellow">nombre</code> = 'Bob'; <br />
-          <code className="module-yellow">nombre</code> = 'Steve';
+        <code className="my-6 font-medium">
+          let<code className="module-yellow font-medium">nombre</code> = 'Bob';{" "}
+          <br />
+          <code className="module-yellow font-medium">nombre</code> = 'Steve';
         </code>
 
         <hr />
@@ -84,7 +89,7 @@ export const Unidad1 = () => {
             <th>Explicacion</th>
             <th>Ejemplo</th>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>String</th>
             <td>
               Se refiere a un caracteres llamado cadena. Para denotar que una
@@ -94,16 +99,17 @@ export const Unidad1 = () => {
 
             <td>let x = 'Bob';</td>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>Number</th>
             <td>Esto es un número. Los números no tienen comillas.</td>
             <td>let x = 10;</td>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>Boolean</th>
             <td>
-              Tienen valor verdadero/falso. <code className="module-purple">true/false</code> son palabras especiales
-              en JS, y no necesitan comillas..
+              Tienen valor verdadero/falso.{" "}
+              <code className="module-purple">true/false</code> son palabras
+              especiales en JS, y no necesitan comillas..
             </td>
             <td>let x = true;</td>
           </tr>
@@ -115,7 +121,7 @@ export const Unidad1 = () => {
           Comentarios
         </h1>
 
-        <p>
+        <p className="font-medium">
           Puedes escribir comentarios entre el código JavaScript, igual que
           puedes en CSS. El navegador ignora el texto marcado como comentario.
           En JavaScript, los comentarios de una sola línea se escriben así:
@@ -127,7 +133,7 @@ export const Unidad1 = () => {
         <h1 id="operadores" className="module-title">
           Operadores
         </h1>
-        <p>
+        <p className="font-medium">
           Un operador es básicamente un símbolo matemático que puede actuar
           sobre dos valores (o variables) y producir un resultado.
         </p>
@@ -139,7 +145,7 @@ export const Unidad1 = () => {
             <th>Simbolo</th>
             <th>Ejemplo</th>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>Suma/concatena</th>
             <td>Se usa para sumar dos números, o juntar dos cadenas en una.</td>
 
@@ -149,7 +155,7 @@ export const Unidad1 = () => {
               "Hola " + "mundo!";
             </td>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>Resta, multiplicación, división</th>
             <td>
               Estos hacen lo que esperarías que hicieran en las matemáticas
@@ -157,27 +163,30 @@ export const Unidad1 = () => {
             </td>
             <td>-, *, /</td>
             <td>
-              9 - 3; <br />
-              8 <code className="module-yellow">*</code> 2; // La multiplicación en JS es un asterisco <br />9 / 3;
+              9 - 3; <br />8 <code className="module-yellow">*</code> 2; // La
+              multiplicación en JS es un asterisco <br />9 / 3;
             </td>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>Operador de asignación</th>
             <td>
               Los has visto anteriormente: asigna un valor a una variable.
             </td>
-            <td><code className="module-yellow">=</code></td>
+            <td>
+              <code className="module-yellow">=</code>
+            </td>
             <td>let x = 'santi';</td>
           </tr>
-          <tr>
+          <tr className="font-medium">
             <th>identidad/igualdad</th>
             <td>
               Comprueba si dos valores son iguales entre sí, y devuelve un valor
               de <code className="module-yellow">true/false</code> (booleano).
             </td>
             <td>===</td>
-            <td>let x = 3; <br />
-              x <code className="module-yellow">===</code> 4;;</td>
+            <td>
+              let x = 3; <br />x <code className="module-yellow">===</code> 4;;
+            </td>
           </tr>
         </table>
         <br />

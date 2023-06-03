@@ -6,11 +6,13 @@ import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
+import { useExerciseStore } from "../../store/exerciseStore.js";
 
 export default function Exercise5() {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState("Elegir sabiamente");
+  const { increment } = useExerciseStore();
 
   const handleRadioChange = (event) => {
     setValue(event.target.value);
@@ -21,16 +23,17 @@ export default function Exercise5() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (value === "best1") {
+    if (value === "worst1") {
       setHelperText("lo entendiste!");
       setError(false);
-    } else if (value === "best2") {
+      increment();
+    } else if (value === "worst2") {
       setHelperText("lo entendiste!");
       setError(false);
-    } else if (value === "best3") {
+    } else if (value === "best") {
       setHelperText("lo entendiste!");
       setError(false);
-    } else if (value === "worst1") {
+    } else if (value === "worst3") {
       setHelperText("Mal loopito, intenta otra vez!");
       setError(true);
     } else {
@@ -42,7 +45,12 @@ export default function Exercise5() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} error={error} variant="standard">
-        <FormLabel id="demo-error-radios">no es un tipo de dato valido</FormLabel>
+        <h1 className="bg-slate-400 rounded-md font-semibold p-1">
+          5. Selecciona la opción correcta:{" "}
+        </h1>
+        <FormLabel id="demo-error-radios">
+          no es un tipo de dato valido..........................................
+        </FormLabel>
         <RadioGroup
           aria-labelledby="demo-error-radios"
           name="quiz"

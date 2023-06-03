@@ -32,7 +32,7 @@ export default function SimpleAccordion() {
         >
           <Typography>
             <div className="font-bold">
-              <h1>Módulo 1: Introducción a JavaScript</h1>
+              <h1>Módulo 1: <span className="font-semibold"> Introducción a JavaScript</span> </h1>
             </div>
           </Typography>
         </AccordionSummary>
@@ -81,7 +81,7 @@ export default function SimpleAccordion() {
         >
           <Typography className=" font-bold">
             <div className="font-bold ">
-              <h1>Módulo 2: Condicionales</h1>
+              <h1>Módulo 2: <span className="font-semibold"> Condicionales</span></h1>
             </div>
           </Typography>
         </AccordionSummary>
@@ -122,7 +122,7 @@ export default function SimpleAccordion() {
         >
           <Typography>
             <div className="font-bold ">
-              <h1>Módulo 3: Bucles</h1>
+              <h1>Módulo 3:  <span className="font-semibold"> Bucles</span></h1>
             </div>
           </Typography>
         </AccordionSummary>

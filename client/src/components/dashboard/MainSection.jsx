@@ -10,7 +10,19 @@ export const MainSection = () => {
 
   handleSession();
 
-  if (loading) return <h1>CARGANDO...</h1>;
+  if (loading)
+    return (
+      <div className="h-screen bg-endsection">
+        <div className="flex justify-center items-center">
+          <h1 className="font-semibold text-4xl my-4 text-white">
+            CARGANDO...
+          </h1>
+        </div>
+        <div className="flex justify-center items-center">
+          <span class="loader"></span>
+        </div>
+      </div>
+    );
 
   console.log("hola" + loading);
 
@@ -32,7 +44,7 @@ export const MainSection = () => {
             </h3>
             {/* CARD */}
             <div className="md:flex md:gap-2">
-              <a href="./dashboard/workarea">
+              <a href="/dashboard/workarea">
                 <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
                   <div className="flex justify-center my-2">
                     <img
@@ -49,7 +61,7 @@ export const MainSection = () => {
                 </div>
               </a>
 
-              <a href="./dashboard/exercises">
+              <a href="/dashboard/exercises">
                 <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
                   <div className="flex justify-center my-2">
                     <img

@@ -6,11 +6,13 @@ import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
+import { useExerciseStore } from "../../store/exerciseStore.js";
 
 export default function Exercise4() {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(false);
   const [helperText, setHelperText] = React.useState("Elegir sabiamente");
+  const { increment } = useExerciseStore();
 
   const handleRadioChange = (event) => {
     setValue(event.target.value);
@@ -24,6 +26,7 @@ export default function Exercise4() {
     if (value === "best") {
       setHelperText("lo entendiste!");
       setError(false);
+      increment();
     } else if (value === "worst1") {
       setHelperText("Mal loopito, intenta otra vez!");
       setError(true);
@@ -39,6 +42,7 @@ export default function Exercise4() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} error={error} variant="standard">
+      <h1 className="bg-slate-400 rounded-md font-semibold p-1">4. Selecciona la opción correcta</h1>
         <FormLabel id="demo-error-radios">Un ciclo for...</FormLabel>
         <RadioGroup
           aria-labelledby="demo-error-radios"
