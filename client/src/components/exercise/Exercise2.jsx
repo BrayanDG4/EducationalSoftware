@@ -40,7 +40,7 @@ export default function Exercise2() {
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} error={error} variant="standard">
 
-        <FormLabel id="demo-error-radios">selecciona la variable incorreta.</FormLabel>
+        <FormLabel id="demo-error-radios">selecciona la variable correta.</FormLabel>
         <RadioGroup
           aria-labelledby="demo-error-radios"
           name="quiz"

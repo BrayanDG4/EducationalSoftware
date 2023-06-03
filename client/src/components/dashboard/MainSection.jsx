@@ -49,7 +49,7 @@ export const MainSection = () => {
                 </div>
               </a>
 
-              <a href="">
+              <a href="./dashboard/exercises">
                 <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-4 w-[100%] h-[100%]">
                   <div className="flex justify-center my-2">
                     <img

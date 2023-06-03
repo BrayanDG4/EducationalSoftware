@@ -39,7 +39,7 @@ export default function Exercise4() {
   return (
     <form onSubmit={handleSubmit}>
       <FormControl sx={{ m: 3 }} error={error} variant="standard">
-        <FormLabel id="demo-error-radios">uno ciclo for...</FormLabel>
+        <FormLabel id="demo-error-radios">Un ciclo for...</FormLabel>
         <RadioGroup
           aria-labelledby="demo-error-radios"
           name="quiz"
